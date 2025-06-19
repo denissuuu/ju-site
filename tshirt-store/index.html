@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T-Shirt Store</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/reviews.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Tagline Section -->
+    <section class="tagline">
+        <p>Welcome to the ultimate destination for timeless t-shirts.</p>
+    </section>
+
     <header>
         <div class="top-bar">
             <!-- Menu Icon -->
@@ -17,6 +27,7 @@
                 <span></span>
                 <span></span>
             </div>
+
             <nav class="nav-links">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -28,7 +39,6 @@
             <div class="right-icons">
                 <div class="cart-icon">
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
                 </div>
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
@@ -39,18 +49,65 @@
 
     <!-- Sliding Menu Panel -->
     <div class="menu-panel" id="menu-panel">
-        <button class="close-btn" id="close-menu" aria-label="Close menu">&times;</button>
         <a href="#">Trending</a>
         <a href="#">Selection</a>
         <a href="#">Promotions</a>
     </div>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div>
             <h2>Style Meets Comfort</h2>
             <p>Discover the perfect t-shirt for every occasion</p>
-            <button>Explore Now</button>
+            <button class="explore-btn">Explore Now</button>
         </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>At T-Shirt Store, we believe in combining style and comfort. Our mission is to provide high-quality, timeless t-shirts that fit every occasion. Whether you're dressing up or keeping it casual, we've got you covered.</p>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review-list">
+            <div class="review">
+                <p>"The best t-shirts I've ever owned! Super comfortable and stylish."</p>
+                <span>- Alex</span>
+            </div>
+            <div class="review">
+                <p>"Great quality and fast shipping. Highly recommend!"</p>
+                <span>- Jamie</span>
+            </div>
+            <div class="review">
+                <p>"I love the variety of designs. Perfect for any occasion."</p>
+                <span>- Taylor</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <img src="assets/images/gallery1.jpg" alt="Gallery Image 1">
+            <img src="assets/images/gallery2.jpg" alt="Gallery Image 2">
+            <img src="assets/images/gallery3.jpg" alt="Gallery Image 3">
+            <img src="assets/images/gallery4.jpg" alt="Gallery Image 4">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>

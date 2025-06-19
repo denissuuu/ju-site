@@ -1,0 +1,40 @@
+.reviews {
+    padding: 40px 20px;
+    background: #000; /* Black background */
+    text-align: center;
+    color: #fff;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.review-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: #111; /* Darker background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    max-width: 300px;
+    text-align: left;
+    color: #ccc;
+}
+
+.review p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review span {
+    font-size: 0.9rem;
+    color: #777;
+}

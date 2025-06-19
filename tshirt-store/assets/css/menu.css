@@ -1,38 +1,50 @@
 /* Sliding menu container */
 .menu-panel {
-    background: #fff;
-    color: #111;
-    display: none;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Completely off-screen */
     width: 250px;
     height: 100%;
+    background: #000; /* Black background for the menu */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease;
-    z-index: 999;
+    transition: left 0.3s ease, visibility 0s linear 0.3s, opacity 0.3s ease; /* Smooth slide-in effect */
+    z-index: 1050; /* Ensure the menu panel is above the content */
+    display: flex;
     flex-direction: column;
     padding: 20px;
+    visibility: hidden; /* Fully hidden by default */
+    opacity: 0; /* Fully transparent by default */
 }
 
-/* Show the menu when active */
+/* Menu panel active state */
 .menu-panel.active {
-    display: flex;
-    left: 0;
+    left: 0; /* Slide into view */
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque */
+    transition: left 0.3s ease, visibility 0s linear 0s, opacity 0.3s ease; /* Smooth transition */
 }
 
 /* Menu links */
 .menu-panel a {
     text-decoration: none;
-    color: #111;
+    color: #fff; /* White text for links */
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
+    margin-bottom: 10px; /* Space between buttons */
+    padding: 10px 15px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
+.menu-panel a:last-child {
+    margin-bottom: 0; /* Remove margin for the last button */
+}
+
+/* Hover effect for menu links */
 .menu-panel a:hover {
-    color: #444;
+    background: #fff; /* White background on hover */
+    color: #000; /* Black text on hover */
+    transform: translateX(5px); /* Slightly move to the right on hover */
 }
 
 /* Close button */
@@ -81,8 +93,12 @@
     background: #feb47b;
 }
 
-/* Menu icon */
+/* Ensure the menu button remains visible */
 .menu-icon {
+    position: fixed; /* Fix the menu button to the top-left corner */
+    top: 10px;
+    left: 20px;
+    z-index: 1100; /* Ensure the menu button is above the sliding menu */
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -93,6 +109,6 @@
     display: block;
     width: 25px;
     height: 3px;
-    background: #fff;
+    background: #fff; /* White color for the menu lines */
     border-radius: 2px;
 }
