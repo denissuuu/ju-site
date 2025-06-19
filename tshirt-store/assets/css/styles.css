@@ -2,14 +2,14 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #fff;
+    color: #111;
     line-height: 1.6;
     margin-top: 50px; /* Match the height of the top bar */
 }
 
 header {
-    background: linear-gradient(90deg, #bebbbb, #000000);
+    background: #111;
     color: #fff;
     padding: 40px 0;
     text-align: center;
@@ -38,44 +38,48 @@ nav ul {
     gap: 20px;
 }
 
-nav a {
+nav a, .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background 0.3s ease;
+    background: transparent;
 }
 
-nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+nav a:hover, .nav-links a:hover {
+    background: #222;
+    color: #fff;
 }
 
 .hero {
-    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    background: #fff;
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: #111;
     padding: 0 20px;
+}
+
+.hero h2, .hero p {
+    text-shadow: none;
 }
 
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero button {
-    background: #000000;
+    background: #111;
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -86,7 +90,7 @@ nav a:hover {
 }
 
 .hero button:hover {
-    background: #feb47b;
+    background: #444;
 }
 
 .features {
@@ -160,19 +164,6 @@ nav a:hover {
     gap: 20px;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.nav-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
 /* Adjust the menu icon */
 .menu-icon {
     display: flex;
@@ -193,12 +184,19 @@ nav a:hover {
 .right-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+    min-width: 80px;
+}
+
+.cart-icon, .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
 }
 
 .search-bar i, .cart-icon i {
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: 1.4rem;
+    color: #111;
     cursor: pointer;
 }
 
@@ -219,7 +217,7 @@ nav a:hover {
 }
 
 footer {
-    background: #333;
+    background: #111;
     color: #fff;
     text-align: center;
     padding: 20px 0;
